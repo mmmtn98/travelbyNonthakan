@@ -1,0 +1,95 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Travel Of Australia 🗺 </title>
+  <!-- Link Leaflet css and javascript -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+</head>
+<body>
+  <center>
+  <br>
+  <FONT FACE="DB Manit X" size = "10">
+  <strong><font color="#3F4E46"<a>🐨 Map of 5 attractions in Australia 🐨</a></FONT></strong>
+  </FONT><br>
+  <FONT FACE="DB Manit X" size = "5">
+    <strong><fontcolor="#3F4E46 ">By : Nonthakan P. ID 62103010252 </font></<strong>
+<br>
+<br>
+
+  <div id = "map" style = "width: 1200px ; height: 800px"></div>
+  <script>
+    var map = L.map('map').setView([-25.026798092227708, 134.25269139005553],16);
+    mapLink = '<a href="http://openstreetmap.org">Nonthakan</a>';
+
+    L.tileLayer(
+      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; ' + mapLink,
+        maxZoom: 19,
+        }).addTo(map);
+
+      var greenIcon = L.icon({
+          iconUrl: 'koala.png',
+          shadowUrl: "",
+
+          iconSize: [40, 30], // size of the icon
+    shadowSize: [50, 64], // size of the shadow
+    iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62], // the same for the shadow
+    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var marker = L.marker([-25.300581527130475, 131.0038390457845],
+    {
+    icon: greenIcon,
+    draggable: true,
+    title: " Uluru",
+    opacity: 1.5
+     }).addTo(map)
+     .bindPopup("<b> Uluru</b>")
+     .openPopup();
+
+     var marker = L.marker([-33.85819130169599, 151.2120848969506],
+     {
+     icon: greenIcon,
+     draggable: true,
+     title: "Sydney Opera House",
+     opacity: 1.5
+      }).addTo(map)
+      .bindPopup("<b>Sydney Opera House</b>")
+      .openPopup();
+
+      var marker = L.marker([-28.637962658096335, 153.63620662650283],
+      {
+      icon: greenIcon,
+      draggable: true,
+      title: "Cape Byron Lighthouse",
+      opacity: 1.5
+       }).addTo(map)
+       .bindPopup("<b>Cape Byron Lighthouse</b>")
+       .openPopup();
+
+       var marker = L.marker([-34.97768368564403, 138.8171978003232],
+       {
+       icon: greenIcon,
+       draggable: true,
+       title: "South Australian Wine Regions",
+       opacity: 1.5
+        }).addTo(map)
+        .bindPopup("<b>South Australian Wine Regions")
+        .openPopup();
+
+        var marker = L.marker([-38.407265665104575, 144.1863197687654],
+        {
+        icon: greenIcon,
+        draggable: true,
+        title: "Great Ocean Road",
+        opacity: 1.5
+         }).addTo(map)
+         .bindPopup("<b>Great Ocean Road")
+         .openPopup();
+  </script>
+</body>
+</html>
